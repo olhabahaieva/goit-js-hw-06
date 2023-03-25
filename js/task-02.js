@@ -14,5 +14,6 @@ ingredients.forEach((ingredient)=>{
   li.classList.add('item');
   li.textContent = ingredient;
   newElement.appendChild(li);
+  return newElement;
 })
 
