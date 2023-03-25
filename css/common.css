@@ -22,3 +22,16 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/*Styles for 3rd task*/
+
+.gallery > li{
+  list-style: none;
+}
+
+.gallery-image{
+  display: flex;
+  width: 250px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
