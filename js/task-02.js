@@ -16,16 +16,8 @@ const listItems = ingredients.map(ingredient => {
   return li;
 })
 
-newElement.innerHTML = "";
-listItems.forEach(li => newElement.innerHTML += li.outerHTML)
+listItems.forEach(item => {
+  newElement.appendChild(item);
+});
 
-
-//Previous bad solution, because it's wrong to use apend inside of the cycle
-// ingredients.forEach((ingredient)=>{
-//   const li = document.createElement('li');
-//   li.classList.add('item');
-//   li.textContent = ingredient;
-//   newElement.appendChild(li);
-//   return newElement;
-// })
 
