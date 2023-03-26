@@ -9,11 +9,23 @@ const ingredients = [
 
 const newElement = document.querySelector('ul#ingredients');
 
-ingredients.forEach((ingredient)=>{
+const listItems = ingredients.map(ingredient => {
   const li = document.createElement('li');
   li.classList.add('item');
   li.textContent = ingredient;
-  newElement.appendChild(li);
-  return newElement;
+  return li;
 })
+
+newElement.innerHTML = "";
+listItems.forEach(li => newElement.innerHTML += li.outerHTML)
+
+
+//Previous bad solution, because it's wrong to use apend inside of the cycle
+// ingredients.forEach((ingredient)=>{
+//   const li = document.createElement('li');
+//   li.classList.add('item');
+//   li.textContent = ingredient;
+//   newElement.appendChild(li);
+//   return newElement;
+// })
 
